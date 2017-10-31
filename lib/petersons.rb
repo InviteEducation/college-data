@@ -59,7 +59,7 @@ class Petersons
     end
   end
 
-  DIR = File.join(Rails.root, 'college-data/data')
+  DIR = "#{File.expand_path File.dirname(__FILE__)}/../data/"
   FILES = [
       'UX_INST',
       'UG_ADMIS',
