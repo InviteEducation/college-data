@@ -26,7 +26,7 @@ class CipCode
 
   def self.codes
     unless @@codes
-      csv_file = File.join(Rails.root, 'data', 'cip_codes.csv')
+      csv_file = File.join("#{File.expand_path File.dirname(__FILE__)}/../data/cip_codes/cip_codes.csv")
       puts "Loading CIP codes from #{csv_file}"
       roots = []
       parent = nil
