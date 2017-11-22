@@ -151,7 +151,9 @@ class Petersons
       undergraduate_state_debt_average: 'UG_CLASS_AVG_DEBT_STATE_D',
       undergraduate_state_debt_percentage: 'UG_CLASS_LOAN_STATE_P',
       undergraduate_private_debt_average: 'UG_CLASS_AVG_DEBT_PRIVATE_D',
-      undergraduate_private_debt_percentage: 'UG_CLASS_LOAN_PRIVATE_P'
+      undergraduate_private_debt_percentage: 'UG_CLASS_LOAN_PRIVATE_P',
+      domestic_profile_required: flag('FORM_DOM_CSS'),
+      international_profile_required: flag('FORM_INTL_CSS')
     }
   }
 
