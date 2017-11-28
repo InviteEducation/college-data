@@ -49,8 +49,8 @@ class Petersons
     lambda { |row| row[column.to_s] }
   end
 
-  def self.flag(column)
-    lambda { |row| row[column.to_s] == 'X' }
+  def self.flag(column, flag_value='X')
+    lambda { |row| row[column.to_s] == flag_value }
   end
 
   def self.add(*columns)
@@ -80,6 +80,7 @@ class Petersons
       applied: if_year(2014, standard_translation('AP_RECD_1ST_N')),
       accepted: if_year(2014, standard_translation('AP_ADMT_1ST_N')),
 
+      continuous_application_deadline: flag(:AP_DL_FRSH_I, 'C'),  
       application_deadline: month_day(:AP_DL_FRSH_MON, :AP_DL_FRSH_DAY),
       application_notification: month_day(:AP_NOTF_DL_FRSH_MON, :AP_NOTF_DL_FRSH_DAY),
 
