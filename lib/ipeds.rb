@@ -34,7 +34,7 @@ class IPEDS
 
   CACHE_DIR = Rails.root.join('tmp', 'ipeds')
   # need to use a proxy to access the IPEDS database from a Amazon EC2 instances
-  BASE_URL = 'http://inviteeducation-proxy.appspot.com/?url=http://nces.ed.gov/ipeds/datacenter/data/'
+  BASE_URL = 'http://nces.ed.gov/ipeds/datacenter/data/'
   FILES = [
     ['HD2016', :HD],
     ['IC2016', :IC],
