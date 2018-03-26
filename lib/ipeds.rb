@@ -36,15 +36,15 @@ class IPEDS
   # need to use a proxy to access the IPEDS database from a Amazon EC2 instances
   BASE_URL = 'http://inviteeducation-proxy.appspot.com/?url=http://nces.ed.gov/ipeds/datacenter/data/'
   FILES = [
-    ['HD2015', :HD],
-    ['IC2015', :IC],
-    ['IC2015_AY', :IC_AY],
-    ['ADM2015', :ADM],
-    ['EFFY2015', :EFFY],
-    ['EF2015D', :EF_D],
-    ['GR2015', :GR],
-    ['C2015_A', :C_A],
-    ['SFA1415', :SFA]
+    ['HD2016', :HD],
+    ['IC2016', :IC],
+    ['IC2016_AY', :IC_AY],
+    ['ADM2016', :ADM],
+    ['EFFY2016', :EFFY],
+    ['EF2016D', :EF_D],
+    ['GR2016', :GR],
+    ['C2016_A', :C_A],
+    ['SFA1516', :SFA]
   ]
   MAPPINGS = {
     HD: {
@@ -98,16 +98,12 @@ class IPEDS
       sat_reading_75: 'SATVR75',
       sat_math_25: 'SATMT25',
       sat_math_75: 'SATMT75',
-      sat_writing_25: 'SATWR25',
-      sat_writing_75: 'SATWR75',
       act_composite_25: 'ACTCM25',
       act_composite_75: 'ACTCM75',
       act_english_25: 'ACTEN25', # we currently don't use this
       act_english_75: 'ACTEN75', # we currently don't use this
       act_math_25: 'ACTMT25', # we currently don't use this
-      act_math_75: 'ACTMT75', # we currently don't use this
-      act_writing_25: 'ACTWR25', # we currently don't use this
-      act_writing_75: 'ACTWR75' # we currently don't use this
+      act_math_75: 'ACTMT75' # we currently don't use this
     },
     EFFY: {
       students_undergraduate: 'EFYTOTLT',
