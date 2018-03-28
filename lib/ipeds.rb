@@ -264,6 +264,7 @@ class IPEDS
           unzipped_file = File.join(CACHE_DIR, entry.name.gsub('_rv',''))
           File.delete(unzipped_file) if File.exists?(unzipped_file)
           zip.extract(entry, unzipped_file)
+          repair_file(entry, unzipped_file)
           puts "Unzipped #{entry.name}"
         end
       end
@@ -412,6 +413,17 @@ class IPEDS
       end
     end
     loaded
+  end
+
+  def repair_file(entry, path)
+    # fix a CSV::MalformedCSVError: Missing or stray quote in line with the hd2016.csv provisional file
+    if entry.name == "hd2016.csv"
+      # read file and fix stray quote, then write contents to the file
+      contents = File.read(path, encoding: 'iso-8859-1:UTF-8')
+      contents.gsub!('""Acting" Director"', '"Acting Director"')
+
+      File.open(path, 'w:iso-8859-1:UTF-8') { |f| f.write(contents) }
+    end
   end
 
 end
