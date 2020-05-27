@@ -36,15 +36,15 @@ class IPEDS
   # need to use a proxy to access the IPEDS database from a Amazon EC2 instances
   BASE_URL = 'http://nces.ed.gov/ipeds/datacenter/data/'
   FILES = [
-    ['HD2017', :HD],
-    ['IC2017', :IC],
-    ['IC2017_AY', :IC_AY],
-    ['ADM2017', :ADM],
-    ['EFFY2017', :EFFY],
-    ['EF2017D', :EF_D],
-    ['GR2017', :GR],
-    ['C2017_A', :C_A],
-    ['SFA1617', :SFA]
+    ['HD2018', :HD],
+    ['IC2018', :IC],
+    ['IC2018_AY', :IC_AY],
+    ['ADM2018', :ADM],
+    ['EFFY2018', :EFFY],
+    ['EF2018D', :EF_D],
+    ['GR2018', :GR],
+    ['C2018_A', :C_A],
+    ['SFA1718_P1', :SFA]
   ]
   MAPPINGS = {
     HD: {
